@@ -4,6 +4,10 @@
   <input type="text" class="form-control" name="name" value="{{ $product->name }}">
 </div>
 <div class="form-group">
+  <label for="exampleInputEmail1">Image</label>
+  <input type="file" class="form-control" name="image">
+</div>
+<div class="form-group">
   <label for="exampleInputEmail1">Price</label>
   <input type="number" class="form-control" name="price" value="{{ $product->price }}">
 </div>

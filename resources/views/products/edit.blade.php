@@ -6,7 +6,7 @@
     <div class="card">
       <div class="card-body">
         <h3>Create product</h3>
-        <form action="{{ route('products.update', ['product' => $product]) }}" method="POST">
+        <form action="{{ route('products.update', ['product' => $product]) }}" method="POST" enctype="multipart/form-data">
           @method('PATCH')
           @include('products._form', ['product' => $product])
           <button class="btn btn-primary" type="submit">Crear</button>
