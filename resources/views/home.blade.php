@@ -19,6 +19,8 @@
             <div class="row">
                 @each('products._product', $products, 'product')
             </div>
+
+            {{ $products->links() }}
         </div>
     </div>
 </div>
