@@ -20,7 +20,9 @@
                 @each('products._product', $products, 'product')
             </div>
 
-            {{ $products->links() }}
+            <div class="row">
+                {{ $products->links() }}
+            </div>
         </div>
     </div>
 </div>

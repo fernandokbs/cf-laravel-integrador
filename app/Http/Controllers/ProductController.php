@@ -68,7 +68,14 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $product->update($request->all());
+        $params = $request->all();
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('upload', 'public');
+            $params['image'] = $path;
+        }
+
+        $product->update($params);
 
         return redirect('/home');
     }

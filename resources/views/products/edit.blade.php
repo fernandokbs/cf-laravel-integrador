@@ -9,7 +9,6 @@
         <form action="{{ route('products.update', ['product' => $product]) }}" method="POST" enctype="multipart/form-data">
           @method('PATCH')
           @include('products._form', ['product' => $product])
-          <button class="btn btn-primary" type="submit">Crear</button>
         </form>
       </div>
     </div>
