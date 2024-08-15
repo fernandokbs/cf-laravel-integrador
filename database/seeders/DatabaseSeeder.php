@@ -13,9 +13,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
+        User::firstOrCreate([
+            'name' => 'Admin',
             'email' => 'admin@gmail.com',
-            'password' => 'testroot'
+        ], [
+            'password' => 'testroot',
+            'role' => User::ADMIN,
+        ]);
+
+        User::firstOrCreate([
+            'name' => 'Customer',
+            'email' => 'customer@gmail.com',
+        ], [
+            'password' => 'testroot',
+            'role' => User::CUSTOMER,
         ]);
 
         $this->call(CategorySeeder::class);

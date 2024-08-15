@@ -19,6 +19,11 @@
 </head>
 
 <body>
+    <style>
+        .card {
+            background-color: white !important;
+        }
+    </style>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -77,8 +82,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
+        <main class="py-4" style="background-color: white;">
+            @yield('content')   
         </main>
     </div>
 </body>
