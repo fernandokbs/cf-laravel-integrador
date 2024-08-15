@@ -14,22 +14,7 @@
             <span class="text-muted">Your cart</span>
             <span class="badge badge-secondary badge-pill">3</span>
           </h4>
-          <ul class="list-group mb-3 sticky-top">
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">
-                  <button>X</button>
-                  Product name
-                </h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">$12</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total (USD)</span>
-              <strong>$20</strong>
-            </li>
-          </ul>
+          @include('shopping._cart')
           <form class="card p-2">
             <div class="input-group">
               <button class="btn btn-primary btn-lg btn-block" type="submit" style="width: 100%;">Continue to checkout</button>

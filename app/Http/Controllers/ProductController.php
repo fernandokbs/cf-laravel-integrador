@@ -9,14 +9,6 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
      * Show the form for creating a new resource.
      */
     public function create()
@@ -32,24 +24,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $params = $request->all();
+        Product::create($this->getParams($request));
 
-        if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('upload', 'public');
-            $params['image'] = $path;
-        }
-
-        Product::create($params);
-
-        return redirect('/home');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Product $product)
-    {
-        //
+        return redirect('/home')->with('success', 'Product created successfully');
     }
 
     /**
@@ -68,14 +45,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $params = $request->all();
-
-        if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('upload', 'public');
-            $params['image'] = $path;
-        }
-
-        $product->update($params);
+        $product->update($this->getParams($request));
 
         return redirect('/home');
     }
@@ -88,5 +58,17 @@ class ProductController extends Controller
         $product->delete();
 
         return redirect('/home');
+    }
+
+    public function getParams($request)
+    {
+        $params = $request->all();
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('upload', 'public');
+            $params['image'] = $path;
+        }
+
+        return $params;
     }
 }

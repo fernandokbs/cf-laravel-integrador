@@ -10,6 +10,7 @@ Auth::routes();
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::post('add-to-cart/{product}', [ShoppingCartController::class, 'store']);
-
 Route::resource('products', ProductController::class);
+
+Route::post('add-to-cart/{product}', [ShoppingCartController::class, 'store']);
+Route::get('checkout', [ShoppingCartController::class, 'index'])->name('checkout');
