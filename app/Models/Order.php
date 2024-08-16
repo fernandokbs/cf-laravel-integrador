@@ -11,8 +11,19 @@ class Order extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'api_response' => 'array'
+    ];
+
     public function orderDetails()
     {
         return $this->hasMany(OrderDetail::class);
+    }
+
+    protected static function booted(): void
+    {
+        static::creating(function (Order $order) {
+            $order->uuid = str()->uuid();
+        });
     }
 }
