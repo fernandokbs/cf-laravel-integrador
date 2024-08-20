@@ -28,18 +28,18 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
-                <input type="text" class="form-control" name="first_name" id="firstName" placeholder="" value="" required="">
+                <input type="text" class="form-control" name="first_name" id="firstName" value="" required>
                 <div class="invalid-feedback"> Valid first name is required. </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
-                <input type="text" class="form-control" name="last_name" id="lastName" placeholder="" value="" required="">
+                <input type="text" class="form-control" name="last_name" id="lastName" value="" required>
                 <div class="invalid-feedback"> Valid last name is required. </div>
               </div>
             </div>
             <div class="mb-3">
               <label for="address">Address</label>
-              <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St" required="">
+              <input type="text" class="form-control" name="address" id="address" required>
               <div class="invalid-feedback"> Please enter your shipping address. </div>
             </div>
             <div class="row">

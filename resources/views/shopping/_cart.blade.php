@@ -16,7 +16,7 @@
     </li>
   @endforeach
   <li class="list-group-item d-flex justify-content-between">
-      <span>Total (USD)</span>
+      <span>Total (MXN)</span>
       <strong>${{ cart()->total() }}</strong>
     </li>
 </ul>

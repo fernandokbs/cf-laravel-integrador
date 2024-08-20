@@ -63,6 +63,6 @@ class OrderController extends Controller
             cart()->destroy();
         }
 
-        return redirect('/home')->with('success', 'Se acretido el pago');
+        return redirect('/home')->with('success', 'Se acredito el pago');
     }
 }
