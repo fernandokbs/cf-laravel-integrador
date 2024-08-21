@@ -8,6 +8,7 @@
         "php": "^8.2",
         "anayarojo/shoppingcart": "^4.2",
         "laravel/framework": "^11.9",
+        "laravel/socialite": "*",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
         "mercadopago/dx-php": "3.0.6"

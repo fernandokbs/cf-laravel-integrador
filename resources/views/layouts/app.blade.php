@@ -39,7 +39,7 @@
                     <ul class="navbar-nav me-auto">
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Facturas</a>
+                                <a class="nav-link" href="{{ route('invoices.index') }}">Facturas</a>
                             </li>
                         @endauth
                     </ul>
