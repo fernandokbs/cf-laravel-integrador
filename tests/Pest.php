@@ -1,5 +1,10 @@
 <?php
 
+uses(
+    Tests\DuskTestCase::class,
+    // Illuminate\Foundation\Testing\DatabaseMigrations::class,
+)->in('Browser');
+
 /*
 |--------------------------------------------------------------------------
 | Test Case
@@ -13,8 +18,8 @@
 
 uses(
     Tests\TestCase::class,
-    // Illuminate\Foundation\Testing\RefreshDatabase::class,
-)->in('Feature');
+    Illuminate\Foundation\Testing\RefreshDatabase::class,
+)->in('Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +36,10 @@ expect()->extend('toBeOne', function () {
     return $this->toBe(1);
 });
 
+expect()->extend('toBeTwo', function () {
+    return $this->toBe(2);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Functions
@@ -44,5 +53,5 @@ expect()->extend('toBeOne', function () {
 
 function something()
 {
-    // ..
+    return 302;
 }
